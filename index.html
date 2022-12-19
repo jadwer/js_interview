@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario reactivo</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/Contacto.js"></script>
+    <script src="js/app.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav id="menu"></nav>
+        <div class="logo"></div>
+        <div class="profile"></div>
+        <div class="title">
+            <div class="breadscrums">Inicio / Formulario reactivo</div>
+            <h1>Formulario reactivo</h1>
+        </div>
+    </header>
+    <main>
+        <div id="form">
+            <form action="#" method="post">
+                <p>Favor de completar los siguientes campos. Los campos con <span class="red">*</span> son obligatorios.
+                </p>
+                <div class="form-container">
+                    <div id="f_name">
+                        <label for="name"><span class="red">*</span>Nombre(s):</label>
+                        <input type="text" name="name" id="name" />
+                        <div class="error">Favor de introducir un nombre</div>
+                    </div>
+                    <div id="f_lastnamename">
+                        <label for="lastnamename"><span class="red">*</span>Apellido paterno:</label>
+                        <input type="text" name="lastnamename" id="lastnamename" />
+                        <div class="error">Favor de introducir un nombre</div>
+                    </div>
+                    <div id="f_moLastname">
+                        <label for="moLastname"><span class="red">*</span>Apellido materno:</label>
+                        <input type="text" name="moLastname" id="moLastname" />
+                        <div class="error">Favor de introducir un nombre</div>
+                    </div>
+                    <div id="f_age">
+                        <label for="age"><span class="red">*</span>Edad:</label>
+                        <input type="text" name="age" id="age" />
+                        <div class="error">Favor de introducir un nombre</div>
+                    </div>
+                    <div id="f_gender">
+                        <fieldset>
+                            <legend><span class="red">*</span>Sexo:</legend>
+                            <input type="radio" name="gender" id="female" value="Femenino"><label
+                                for="female">Femenino</label>
+                            <input type="radio" name="gender" id="male" value="Masculino"><label
+                                for="male">Masculino</label>
+                        </fieldset>
+                    </div>
+                    <div id="f_email">
+                        <label for="email"><span class="red">*</span>Correo electrónico:</label>
+                        <input type="text" name="email" id="email" />
+                        <div class="error">Favor de introducir un nombre</div>
+                    </div>
+                    <div id="f_tel">
+                        <label for="tel"><span class="red">*</span>Teléfono:</label>
+                        <input type="text" name="tel" id="tel" />
+                        <div class="error">Favor de introducir un nombre</div>
+                    </div>
+                </div>
+                <div class="actions">
+                    <button type="reset" onclick="resetForm(event)">Cancelar</button>
+                    <button type="submit" onclick="addContact(event)">Guardar</button>
+                </div>
+            </form>
+        </div>
+        <div id="contactsTable">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre(s)</th>
+                        <th>Apellido paterno</th>
+                        <th>Apellido materno</th>
+                        <th>Edad</th>
+                        <th>Sexo</th>
+                        <th>Correo electrónico</th>
+                        <th>Teléfono</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Juan Alberto</td>
+                        <td>Toledo</td>
+                        <td>Venegas</td>
+                        <td>26</td>
+                        <td>Masculino</td>
+                        <td>correo@algo.com</td>
+                        <td>5654156878</td>
+                        <td>Editar</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+</body>
+
+</html>
